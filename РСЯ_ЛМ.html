@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Привлечение аудитории в MAX под ключ — Максим Журавков</title>
+<meta name="description" content="Привлекаю целевую аудиторию в MAX-канал для онлайн-школ и экспертов. Тестовый период за мой счёт.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Geologica:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg: #07070e;
+  --white: #eeedf8;
+  --accent: #a78bfa;
+  --accent2: #818cf8;
+  --gray: #6b6b8a;
+  --gray-light: #a8a8c8;
+  --border: rgba(167,139,250,0.13);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 90% 50% at 50% -5%, rgba(109,60,200,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 90% 90%, rgba(79,70,229,0.15) 0%, transparent 60%);
+  color: var(--white);
+  font-family: 'Geologica', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+
+/* NAV */
+nav {
+  padding: 22px 0;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.nav-name { font-family: 'Unbounded', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+.nav-tag { font-size: 11px; color: var(--gray); }
+
+/* HERO */
+.hero { padding: 60px 0 48px; text-align: center; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 24px;
+}
+.eyebrow span { width: 24px; height: 1px; background: var(--accent); display: block; }
+
+.hero h1 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(26px, 5.5vw, 46px);
+  font-weight: 900; line-height: 1.1; letter-spacing: -.025em;
+  margin-bottom: 20px;
+}
+.hero h1 em { font-style: normal; color: var(--accent); }
+
+.hero-lead {
+  font-size: clamp(16px, 2.5vw, 19px);
+  color: var(--gray-light); max-width: 500px;
+  margin: 0 auto 36px; line-height: 1.7; font-weight: 300;
+}
+.hero-lead strong { color: var(--white); font-weight: 500; }
+
+/* STATS */
+.stats {
+  display: flex; justify-content: center; gap: 0;
+  border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden; margin-bottom: 48px; max-width: 480px;
+  margin-left: auto; margin-right: auto;
+}
+.stat { flex: 1; padding: 18px 16px; text-align: center; }
+.stat + .stat { border-left: 1px solid var(--border); }
+.stat-n {
+  font-family: 'Unbounded', sans-serif; font-size: 24px; font-weight: 900;
+  line-height: 1; margin-bottom: 4px;
+  background: linear-gradient(135deg, #a78bfa, #818cf8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-l { font-size: 11px; color: var(--gray); line-height: 1.4; }
+
+/* OFFER BOX */
+.offer-box {
+  background: linear-gradient(135deg, rgba(109,40,217,0.2), rgba(67,56,202,0.1));
+  border: 1px solid rgba(167,139,250,0.25);
+  border-radius: 20px; padding: 36px 32px;
+  margin-bottom: 36px; position: relative; overflow: hidden;
+  text-align: left;
+}
+.offer-box::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(167,139,250,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.offer-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff; font-family: 'Unbounded', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; padding: 5px 12px; border-radius: 6px;
+  margin-bottom: 18px;
+}
+.offer-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 900; line-height: 1.2; margin-bottom: 14px;
+}
+.offer-title em { font-style: normal; color: var(--accent); }
+.offer-desc {
+  font-size: 15px; color: var(--gray-light);
+  line-height: 1.75; margin-bottom: 24px; font-weight: 300;
+}
+.offer-desc strong { color: var(--white); font-weight: 500; }
+
+.offer-rows { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.offer-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 16px;
+}
+.offer-row-icon { font-size: 18px; flex-shrink: 0; }
+.offer-row-text { font-size: 13px; color: var(--gray-light); line-height: 1.55; }
+.offer-row-text strong { color: var(--white); font-weight: 500; display: block; margin-bottom: 1px; }
+
+/* FILTER */
+.filter {
+  background: rgba(0,0,0,0.2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px; margin-bottom: 28px;
+  font-size: 13px; color: var(--gray-light); line-height: 1.65;
+}
+.filter strong { color: var(--white); font-weight: 500; }
+
+/* CTA */
+.cta-btn {
+  display: block; width: 100%; text-align: center; text-decoration: none;
+  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  color: #fff; font-family: 'Unbounded', sans-serif;
+  font-size: 15px; font-weight: 700; letter-spacing: .02em;
+  padding: 20px 32px; border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.4);
+  transition: transform .15s, box-shadow .15s;
+  position: relative; overflow: hidden;
+}
+.cta-btn::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.5); }
+.cta-btn:active { transform: translateY(0); }
+.cta-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 10px; line-height: 1.6; }
+
+/* HOW */
+.how { padding: 0 0 48px; }
+.sec-lbl {
+  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gray); margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sec-lbl::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.steps { display: flex; flex-direction: column; gap: 0; padding-left: 18px; position: relative; }
+.steps::before {
+  content: ''; position: absolute; left: 0; top: 6px; bottom: 6px;
+  width: 1px; background: linear-gradient(to bottom, var(--accent), transparent);
+}
+.step { padding: 0 0 28px 24px; position: relative; }
+.step:last-child { padding-bottom: 0; }
+.step::before {
+  content: ''; position: absolute; left: -4px; top: 6px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 10px rgba(167,139,250,0.5);
+}
+.step-num { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; font-weight: 500; }
+.step-title { font-family: 'Unbounded', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.step-text { font-size: 13px; color: var(--gray-light); line-height: 1.6; }
+
+/* WHO */
+.who { padding: 0 0 40px; }
+.who-items { display: flex; flex-direction: column; gap: 8px; }
+.who-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  border-radius: 10px; padding: 13px 16px;
+  font-size: 14px; color: var(--white); line-height: 1.5;
+}
+.who-dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 5px;
+  background: linear-gradient(135deg, #a78bfa, #818cf8);
+}
+
+/* ANCHOR */
+.anchor {
+  text-align: center; padding: 48px 0 64px;
+  border-top: 1px solid var(--border);
+}
+.anchor-pre { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.anchor h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 900; line-height: 1.2; margin-bottom: 10px;
+}
+.anchor h2 em { font-style: normal; color: var(--accent); }
+.anchor-sub { font-size: 15px; color: var(--gray-light); margin-bottom: 28px; max-width: 380px; margin-left: auto; margin-right: auto; }
+
+/* FOMO */
+.fomo {
+  text-align: center; padding: 16px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12px; font-weight: 700; color: var(--gray);
+  letter-spacing: .02em; line-height: 1.6;
+}
+.fomo em { font-style: normal; color: var(--accent); }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border); padding: 20px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-name { font-family: 'Unbounded', sans-serif; font-size: 11px; font-weight: 700; color: var(--gray); }
+.footer-link { font-size: 12px; color: var(--gray); text-decoration: none; }
+.footer-link:hover { color: var(--accent); }
+
+/* MOBILE */
+@media (max-width: 560px) {
+  .wrap { padding: 0 16px; }
+  .hero { padding: 40px 0 36px; }
+  .stats { flex-direction: column; max-width: 100%; }
+  .stat + .stat { border-left: none; border-top: 1px solid var(--border); }
+  .offer-box { padding: 24px 18px; }
+  .cta-btn { font-size: 13px; padding: 18px 24px; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+@media (hover: none) {
+  .cta-btn:hover { transform: none; box-shadow: 0 8px 32px rgba(124,58,237,0.4); }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.hero { animation: fadeUp .5s ease both; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-name">Максим Журавков</span>
+    <span class="nav-tag">MAX-продюсер</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="eyebrow"><span></span>Целевая аудитория в MAX</div>
+    <h1>Ваш MAX-канал<br>должен <em>приносить заявки.</em></h1>
+    <p class="hero-lead">
+      Привлекаю целевую аудиторию для онлайн-школ и экспертов
+      через рекламу и посевы в MAX. <strong>Тест — за мой счёт.</strong>
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-n">145+</div>
+        <div class="stat-l">проектов за 4 года</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">138₽</div>
+        <div class="stat-l">минимальная стоимость подписчика</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">0₽</div>
+        <div class="stat-l">за мою работу на тесте</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <div class="offer-box">
+    <div class="offer-badge">🎁 Тестовый период</div>
+    <h2 class="offer-title">Бесплатно протестирую<br><em>гипотезы роста вашего канала</em></h2>
+    <p class="offer-desc">
+      Я настолько уверен в результате, что <strong>работаю бесплатно на старте.</strong>
+      Вы платите только рекламный бюджет — остальное на мне.
+    </p>
+
+    <div class="offer-rows">
+      <div class="offer-row">
+        <div class="offer-row-icon">🔍</div>
+        <div class="offer-row-text">
+          <strong>Разбор канала</strong>
+          Нахожу где именно теряются заявки прямо сейчас
+        </div>
+      </div>
+      <div class="offer-row">
+        <div class="offer-row-icon">💡</div>
+        <div class="offer-row-text">
+          <strong>Гипотезы и стратегия</strong>
+          Формирую что тестируем через рекламу и посевы
+        </div>
+      </div>
+      <div class="offer-row">
+        <div class="offer-row-icon">🚀</div>
+        <div class="offer-row-text">
+          <strong>Запуск теста — бесплатно</strong>
+          Веду рекламу и посевы. Вы платите только бюджет.
+        </div>
+      </div>
+      <div class="offer-row">
+        <div class="offer-row-icon">📊</div>
+        <div class="offer-row-text">
+          <strong>Цифры — вы решаете</strong>
+          Видите результат и сами принимаете решение
+        </div>
+      </div>
+    </div>
+
+    <div class="filter">
+      <strong>Важно: беру не всех.</strong> Работаю бесплатно — поэтому выбираю проекты. Нужен реальный продукт и рекламный бюджет на тест. Если не смогу дать результат — скажу честно на созвоне.
+    </div>
+
+    <a href="https://max.ru/join/uRftRQ_4Sk4_d_nd-iEhzAl6mREDn0lG7xLNk-7Kadc" class="cta-btn">Написать мне в MAX</a>
+    <p class="cta-note">Созвон 20 минут · Без обязательств · Максимум 2 проекта в месяц</p>
+  </div>
+
+  <!-- HOW -->
+  <section class="how">
+    <p class="sec-lbl">Как это работает</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">Шаг 01</div>
+        <div class="step-title">Пишете мне в MAX</div>
+        <div class="step-text">Кратко о проекте: ниша, продукт, что уже пробовали. Договариваемся на созвон.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Шаг 02</div>
+        <div class="step-title">Созвон 20 минут</div>
+        <div class="step-text">Разбираем вашу ситуацию. Я смотрю есть ли точки роста и говорю честно подходим ли мы друг другу.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Шаг 03</div>
+        <div class="step-title">Тест за мой счёт</div>
+        <div class="step-text">Запускаю рекламу и посевы. Вы выделяете только рекламный бюджет. Моя работа бесплатно.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Шаг 04</div>
+        <div class="step-title">Вы решаете</div>
+        <div class="step-text">Смотрите на цифры. Хотите продолжать — обсуждаем условия. Нет — никаких обязательств.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="who">
+    <p class="sec-lbl">Для кого</p>
+    <div class="who-items">
+      <div class="who-item"><div class="who-dot"></div>Онлайн-школы и эксперты которые хотят стабильный поток заявок из MAX</div>
+      <div class="who-item"><div class="who-dot"></div>Те кто уже запускал рекламу в MAX — результата не было — хотят попробовать без риска</div>
+      <div class="who-item"><div class="who-dot"></div>Те кто ищет надёжного партнёра на долго а не подрядчика на один месяц</div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="anchor" id="cta">
+    <div class="anchor-pre">Осталось 2 места в этом месяце</div>
+    <h2>Готовы проверить<br>на <em>своём</em> канале?</h2>
+    <p class="anchor-sub">Напишите мне в MAX. Расскажите о проекте. Начнём тест уже на этой неделе.</p>
+    <a href="https://max.ru/join/uRftRQ_4Sk4_d_nd-iEhzAl6mREDn0lG7xLNk-7Kadc" class="cta-btn" style="max-width:360px;margin:0 auto 12px;display:block;">Написать в MAX → </a>
+    <p class="cta-note">Отвечаю в течение нескольких часов</p>
+  </section>
+
+  <!-- FOMO -->
+  <div class="fomo">
+    Пока вы читаете это —<br>
+    <em>чей-то канал уже приносит заявки.</em>
+  </div>
+
+  <footer>
+    <span class="footer-name">Максим Журавков</span>
+    
+  </footer>
+
+</div>
+
+</body>
+</html>
